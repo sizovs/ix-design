@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Title</title>
+    <meta charset="utf-8">
+    <style>
+      @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+      @import url(https://fonts.googleapis.com/css?family=Exo+2:400,700,400italic);
+      @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+      body { 
+        font-family: 'Exo 2';         
+        background-color: black !important;
+      }
+      h1, h2, h3 {
+        font-family: 'Exo 2';
+        font-weight: normal;
+      }
+    
+      strong { border-bottom: 5px solid #e74c3c; color: white;}
+      em { font-weight: bold; font-style: normal; }
+
+      .strongbg strong {
+        padding: 30px;
+        background-color: black
+      }
+
+      .corner-ribbon {
+        text-align: center;
+        background: #e74c3c;
+        width: 400px;
+        font-size: 1.5em;
+        position: absolute;
+        top: 50px;
+        left: -150px;
+        padding: 0.5em;
+        transform: rotate(-45deg);
+      }
+
+      .headspace, .white { background-color: white !important; }
+
+      .remark-slide-scaler { box-shadow: none; }
+      .remark-slide-content { background-size: 100%; background-color: black; color: white;}
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+      .almostblack { background-color: #091513 }
+      .invert { color: white; }
+      .strike { text-decoration: line-through;}
+      
+      .oki { background-color: #3D9972; color: white;}
+      .oki strong { border-bottom-color: white; }
+
+      .bad { background-color: #e74c3c; color: white;}
+      .fade {color:#d3d3d3}
+      .fade strong {color:black}
+      .img100 img {width:122%}
+      .img70 img {width: 70%;}
+      .img50 img {width: 50%;}
+      .height100 { background-size: 90%; }
+      .height50 { background-size: 50%; }
+
+      .left {
+        width: 50%;
+        float: left;
+      }
+      .right {
+        width: 50%;
+        float: right;
+      }
+      
+      .giveandtake img {
+        width: 350px;
+        top: 100px;
+        right: 0px;
+        position: absolute;
+      }
+
+
+      .growbot { background-color: #6A4CA6}
+      /* .splash h3 { position: absolute; bottom: 10px; right: 10px; } */
+
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+
+
+class: middle, center, splash
+# **IX** Design
+### @eduardsi · sizovs.net
+???
+- me build an incredible tech department (spring guys.)
+- my hobby is attending job interviews 
+- my earn living by consulting and running tech training. Sometimes hiring consulting.
+
+---
+# Agenda
+## **Day I** IX design: theory and practice
+## **Day II** Lean coffee
+
+---
+background-image:url(homebrew.png)
+???
+- this is AFTER google ditched brainteasers: How many gas stations are in Manhattan? 
+
+---
+class: strongbg, center, middle
+background-image:url(dhh.png)
+
+---
+class: center, middle
+# If you are asked to code on paper, ask for scissors to do refactoring.
+### (c) Sandro Mancuso
+
+---
+class: strongbg, center, middle
+background-image:url(rejected.png)
+
+---
+class: center, middle
+### Before cofounding GitHub I applied for an engineering job at Yahoo and didn’t get it. Don’t let other people discourage you.
+### – Chris, CEO @ GitHub
+
+---
+class: center, middle
+### Major social network company rejected me after an interview with, "We didn't think you knew enough JS."
+### – Kyle, author of "You Don't Know JS" books
+
+---
+class: center, middle
+### Got rejected from a junior position at Atlassian for not knowing enough about JavaScript. Shortly after they now use the JavaScript compiler that I wrote across most of their JavaScript stack.
+### – Sebastian, Creator of Babel and Yarn
+
+---
+class: center, middle
+### Interviewed at Netflix, didn't get the job. At Pivotal, I helped create Spring Cloud Netflix which integrates Netflix Open Source with Spring Boot. Now Netflix uses Spring Cloud Netflix... at Netflix.
+### – Spencer, Spring Cloud Lead @ Pivotal
+
+---
+## Conclusion?
+
+--
+
+class: img50
+### - Don't copy others. They're doing it wrong.
+
+--
+
+![](googlegoogle.png)]
+
+--
+
+### - Rumors spread.
+???
+- great interviewers get all the benefits. It's stressful, memoable moment for people. Use it!
+- not only your company's, but also yours.
+
+---
+class: center, middle
+# We are always **looking** for talented individuals to join ClearScore...
+???
+- every company do. For years. :)
+- a company must be growing individuals.
+- most efforts that a company is spending on LOOKING must be spent on GROWING.
+- the best developers I hired were NEVER GREAT and they never felt talented. they come from shitty environment. give examples.
+
+---
+class: center, middle
+# Great developers are **raised**, not hired.
+???
+- stop looking for great developers, start growing them.
+
+---
+class: center, middle
+# We should hire developers that, under proper **mentorship**, will become great.
+### (in a reasonable time)
+???
+- mentorship requires time. 
+- the role of the best tech people is to mentor others (with pair programming)
+- you will
+
+---
+class: center, middle
+![:ribbon Challenge]
+# Qualities that we **can grow** vs. **can't grow**
+### (or can fix / can't fix)
+???
+what are the important qualities for a candidate? can grow / can fix column 1, can't grow cant fix column 2
+
+---
+class: center, middle
+# Pair Programming
+### anti-pattern
+???
+
+---
+class: center
+background-image:url(pp.jpg)
+
+---
+class: center, middle
+## **Stress hormone (cortisol) turns off System II**
+![](kahneman.jpg)
+???
+ThoughtWorks (offline, my code), Vaadin (online). 
+pairing with foreign people, foreign place. 
+
+---
+class: center, middle
+### We'd ask the candidate to implement, using TDD, a function returning n-th Fibonacci number.  We'd give them both the math definition and a table with examples as well as a skeleton code with 2 failing tests... **Surprisingly, we had a lot of candidates who struggled miserably with this**. 
+# (c) Michal
+
+---
+class: center, middle
+## Will the candidate promote your company?
+
+---
+class: center, middle
+## Problem II: Fibonacci doesn't reveal much
+### (and makes you just another boring company)
+???
+
+---
+class: center, middle
+# Homework FTW!
+
+---
+class: center, middle
+## The homework was a bit too complex and, from the feedback we received, it took a good weekend to complete, and we had a large drop-off **because people couldn't be bothered**...
+???
+- well, I remember sending homework with UI... :) 
+- candidates have really bad exprience. No feedback.
+
+---
+class: giveandtake
+# **Give and Take**
+## - Free code review
+## - Sales pitch 🚀
+![](giveandtake.jpg)
+???
+- you are not the inteviewer anymore. You are doing work, too.
+- the best icebreaker, because candidate listen to for 10 mins and will get relaxed
+
+---
+class: 
+## 1. In-the-office
+???
+An interview is a conversation where questions are asked and answers are given 😱
+--
+
+### coffee tour → 
+--
+ pitch! 
+--
+→ conversation ~~interview~~
+
+--
+
+## 2. Homework 👨‍💻
+### fork 
+--
+→  estimate 
+--
+→ complete 
+--
+→ send for review
+
+--
+
+## 3. Review 🔎
+### code review 
+--
+→ send summary, recommendations + offer/no offer
+
+---
+## Presentation (7 minutes max + Q&A)
+
+--
+
+### - Explain the hiring process 
+
+--
+
+### - High and positive energy ⚡ ︎
+???
+informal style
+who? some LIKEABLE person.
+
+--
+
+### - No zoo, only pilot and co-pilot
+???
+- co-pilot gives a pilot feedback "outside view", maybe help during the interview.
+- pilos is the best interviewer.
+
+--
+
+### - Company → Product → Process → Tech → Culture → Goals
+???
+culture – who is the leader and whom will I learn from? 
+goals – mb problems? what you want to fix?
+
+--
+
+### - Q&A
+???
+The goal is to make candidate feel that he's been wasting time working at the current company. A candidate must like you.
+
+--
+
+### – Give a sticker for listening (IX 🚀)
+
+---
+class: center, middle
+![:ribbon Challenge]
+## In a group, create an awesome presentation for candidates (use sticky notes instead of slides)
+???
+- you have 30 minutes
+- You will be speaking : ) 4 people can speak, no problem.
+
+---
+# (Tech) Conversation
+### - ~~Checklist~~ Discovery
+### - Be the mentor 
+### - Open-ended questions (but not too open-ended)
+???
+if you have checklist, you don't listen. You listen if you discover.
+
+
+---
+class: center, middle
+## What good code means for you? What are the qualities of a good code?
+### SOLID, GoF, Testability...
+
+---
+
+class: center, middle
+## Who, in your opinion, is responsinsible for quality in a software project?
+
+---
+class: center, middle
+## How would you ensure that code quality is high in a software project?
+### Code Reviews, PP, unit testing, test pyramid...
+
+
+---
+class: center, middle
+## Do you have experience doing PP? What's your opinion about it?
+
+---
+class: center, middle
+## How your current software project is built?
+### architecture, layers, tools, tx, ops, cycle time, uptime...
+
+---
+class: center, middle
+## What customer problem does your current software project solve? 
+### customers, needs, requirements...
+
+---
+class: center, middle
+## Imagine are we showing a demo to our customer after 2-week sprint. Customer says that she expected something different.
+### who's to blame? what's the problem?
+
+---
+
+class: center, middle
+## How do you keep up with trends? How do you learn?
+### books, blogs, pet projects...
+
+---
+class: center, middle
+# **Homework**
+
+---
+class: center, middle
+# **github.com/sizovs/awesome-homework-for-java-developers**
+
+---
+background-image:url(commits.png)
+
+---
+class: center, middle
+# Accenture-induced damage
+
+---
+class: center, middle
+# Bad docs, hard to run the project.
+
+---
+class: center, middle
+# No tests. 
+
+---
+class: center, middle
+# Shitty tests.
+
+---
+class: center, middle
+# Negligence
+### (burbur story)
+
+---
+github.com/holinov/twino-test
+
+github.com/ekato-makashvili/Twino-Task
+
+github.com/yahito/twino-test
+
+github.com/smesh1995/Twino-task
+
+github.com/JohnnyKokay/loaner
+
+github.com/anatolykizhlo/twino-homework
+
+github.com/edogaafx/twino-homework
+
+github.com/Kuzmin489/homework2
+
+github.com/vkarnigin/twino-homework
+
+github.com/dsurogatov/TwinoTask
+
+github.com/photojohn/twino_HW
+
+github.com/search?q=4finance+homework
+
+---
+# Homework feedback
+
+--
+
+### - Personalized kudo
+
+--
+
+### - Good parts
+
+--
+
+### - ~~Bad parts~~ Improvement recommendations, books, blogs
+
+--
+
+### - Next steps
+
+--
+
+### - Before sending, show to someone good at copywriting
+
+---
+- (x) bad followers
+- (x) job hoppers
+- (x) stagnation (same position)
+- (x) 10 years of websphere
+- (x) leadership aversion
+- respect low skilled people, people with WEIRD opinion.
+
+---
+## Pro-tips
+
+--
+
+- ### Hi, Alex! vs. What's your name?
+
+--
+
+- ### Never. Ever. Take. Notes.
+
+--
+
+- ### Chair / table layout "we are teammates"
+
+--
+
+- ### Measure NPS (how did you enjoy the interview?)
+
+---
+## Hiring accelerators
+
+--
+
+- ### Referral network
+
+--
+
+- ### Bloggers
+
+--
+
+- ### OSS contributors
+
+--
+
+- ### Meetup and conference speakers (or people they recommend)
+
+--
+
+- ### Workshop, code retreat attendees
+
+--
+
+- ### Public speaking
+
+---
+class: center, middle
+# Impostor syndrome
+
+---
+class: white, center, middle
+![](kruger.png)
+???
+- many really great, shy, hard-working people suffer from Impostor
+
+---
+class: center, middle
+## Women are more selective and some may be more self-conscious, and as a result, apply to positions where they 100% fit the requirement.
+
+---
+class: img70
+### Requirements :(
+![](req.png)
+
+---
+class: center, middle
+## You will work in a cross-functional team, will **learn** Scala, **gain experience** in designing distributed systems... 
+
+---
+class: center, middle
+# **"Smart"** requirements
+
+---
+
+### Our tech-stack is Java 8, Spring...
+
+--
+
+### Every day, we work closely with our customers, trying to understand their needs, generate new ideas and experiments.
+
+--
+
+### Our devs take full responsibility for architecture and testing. 
+
+--
+
+### You will work in a cross-functional team where everyone is a software developer. No job specs, hierarchies, and job titles.
+???
+flat structure
+
+--
+
+### Pair programming. Every day.
+
+--
+
+### YBI/YRI
+
+--
+
+### Sometimes we choose boring solutions. No k8s here.
+???
+Pipedrive bootcamp story (2 days in a customer service.)
+
+---
+class: center, middle
+# **PIRNIE**
+### Problem in recruiters, not in engineers
+???
+- forgetting
+- bureaucracy
+- weird questions asked
+- offer mentorship
+- monitor what partners are doing (London scam)
+
+---
+class: center, middle
+# Mystery .strike[shopping] job applicant
+???
+- does 10 years of meaningless experience and 100 keywords get you hired?
+
+---
+class: center, middle
+# New role: **IX lead**
+
+---
+class: center, middle
+# New ceremony: **IX retrospective**
+
+---
+# Conclusion
+
+--
+
+### - Humans vs. ~~processes~~
+
+--
+
+### - Discovery vs. ~~predictability~~
+
+--
+
+### - Mentoring vs. ~~filtering~~
+
+--
+
+### - Make someone's day special vs. ~~interviewing~~
+???
+even if you won't make a hire, they will come back. Or spread a word.
+
+    </textarea>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/remark/0.14.0/remark.min.js">
+    </script>
+    <script>
+      remark.macros.ribbon = function (text) {
+        var url = this;
+        return '<div class="corner-ribbon">' + text + '</div>';
+      };      
+      var slideshow = remark.create({
+        ratio: '16:9',
+        slideNumberFormat: function (current, total) { return "" }
+      })
+    </script>
+  </body>
+</html>
